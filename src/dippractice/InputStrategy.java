@@ -6,5 +6,5 @@ package dippractice;
 
 public interface InputStrategy {
     
-    public abstract void inputMsg(String msg);
+    public abstract String inputMsg();
 }

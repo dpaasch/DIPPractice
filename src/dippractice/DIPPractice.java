@@ -3,10 +3,16 @@ package dippractice;
 public class DIPPractice {
 
     public static void main(String[] args) {
-//        OutputStrategy outputStrategy = new ConsoleOutput();
+       
+        InputStrategy inputStrategy = new ConsoleInput();
+        
+        // OutputStrategy outputStrategy = new ConsoleOutput();
         OutputStrategy outputStrategy = new GUIOutput();
         MessageService msgService = new MessageService();
+
         // outputMsg delegates work to OutputStrategy
-        msgService.outputMsg(outputStrategy);
+        msgService.outputMsg(outputStrategy,inputStrategy);
+
     }
 }
+     

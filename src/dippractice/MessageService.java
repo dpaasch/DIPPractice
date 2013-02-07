@@ -3,7 +3,7 @@ package dippractice;
 public class MessageService {
     
     // Constant representing a single message
-    private static final String MSG = "Hello";
+//    private static final String MSG = "Hello";
 
 //    public void outputMsg() {
 //        //Very Rigid - only ouputs to console
@@ -21,8 +21,9 @@ public class MessageService {
     //Anticipating change, going to want different ways to output
     //Any OutputStrategy class can now be used, because it's an abstraction. 
     //This is now a high level class that is flexible, not rigid, not fragile
-    public void outputMsg(OutputStrategy out, InputStrategy in) {
-        out.outputMsg(MSG);
-        in.inputMsg(MSG);
+    public void outputMsg(OutputStrategy out,InputStrategy in) {
+        out.outputMsg(in.inputMsg());
+//        String msg = in.inputMsg();
+//        out.outputMsg(msg);
     }
 }
